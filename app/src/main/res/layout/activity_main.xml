@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    android:id="@+id/swipe_id"
+    tools:context="com.smarthome.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/door"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/opened_door1" />
+            <TextView
+                android:id="@+id/door_label"
+                android:layout_below="@+id/door"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:text="Door is opened" />
+
+            <ImageView
+                android:id="@+id/window"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@+id/fridge"
+                android:layout_alignStart="@+id/fridge"
+                android:layout_alignTop="@+id/door"
+                android:src="@drawable/opened_win" />
+            <TextView
+                android:id="@+id/window_label"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/window"
+                android:gravity="center"
+                android:text="Window is opened"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/light"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/door_label"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/light_on" />
+
+            <TextView
+                android:id="@+id/light_label"
+                android:layout_below="@+id/light"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:text="light is ON" />
+
+            <ImageView
+                android:id="@+id/fridge"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/window_label"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/f1" />
+
+            <TextView
+                android:id="@+id/fridge_label"
+                android:layout_below="@+id/fridge"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:text="Fridge is opened" />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/icons"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/heat_value"
+                android:background="@drawable/rounded_edittext"
+                android:textColor="@color/White"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="22 °C"
+                />
+            <TextView
+                android:id="@+id/heat_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heat_value"
+                android:textSize="20sp"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:text="Temp"
+                />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review"
+        android:layout_below="@+id/buttons_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        />
+
+</RelativeLayout>
+
+
+
